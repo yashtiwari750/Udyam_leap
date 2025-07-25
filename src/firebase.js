@@ -2,7 +2,6 @@
 
 //this lines import the initializeapp functions form the firebase library
 //this is the main function we need to connect to our pronect
-import firebase from 'firebase/app';
 import { initializeApp } from "firebase/app"
 
 //this is the coonfiguration object.
