@@ -2,14 +2,14 @@
 
 //this lines import the initializeapp functions form the firebase library
 //this is the main function we need to connect to our pronect
-
+import firebase from 'firebase/app';
 import { initializeApp } from "firebase/app"
 
 //this is the coonfiguration object.
 //instead of wtriting our secretss keys here , we are telling our to get them 
 // from the replit secrets vault .vite make them available under //`import.meta.env`
 
-const firebaseConfig = 
+const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,

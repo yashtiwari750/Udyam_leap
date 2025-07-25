@@ -1,7 +1,7 @@
 //src/App.jsx
 //We import our initialised Firebase app from the file we just created
 
-import firebaseApp from "./firebase"
+import firebaseApp from "./firebase.js"
 
 function App(){
   // A simple check to see if the firebaseApp object was created successfully
