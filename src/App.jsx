@@ -1,20 +1,27 @@
-import React, { useState } from 'react'
+//src/App.jsx
+//We import our initialised Firebase app from the file we just created
 
-function App() {
-  const [count, setCount] = useState(0);
+import firebaseApp from "./firebase"
+
+function App(){
+  // A simple check to see if the firebaseApp object was created successfully
+  const isConnected  = firebaseApp ? true: false;
 
   return (
-    <div>
-      <p>React ⚛️ + Vite ⚡️ + Replit 🌀</p>
-      <button
-        onClick={() => setCount((count) => count + 1)}>
-        count is: {count}
-      </button>
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR uupdates.
-      </p>
-    </div>
-  )
-}
+    <div className="app-container">
+    <h1> Udyam Leap</h1>
+      {/* this is a conditional message. if the connection is successful, it shows the success message */}
 
-export default App
+      {isConnected? (
+      <p style = {{ color: 'green' }} > 
+        Successfully connected to Firebase!
+      </p>) :
+        (<p style = {{ color : 'red'}} > 
+          Failed to connect to Firebase.
+        </p>
+        )
+                  }
+    </div>
+  );
+      }
+        export default App;
